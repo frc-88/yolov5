@@ -15,6 +15,8 @@ def get_package_data(directory, filetype=None):
 
 package_data_paths = get_package_data("data")
 package_data_paths.extend(get_package_data("models", ".yaml"))
+package_data_paths.extend(get_package_data("data", ".yaml"))
+package_data_paths.append("./requirements.txt")
 
 setup(
     name='yolov5',
